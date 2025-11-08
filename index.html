@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Tablero de Libros</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        /* Añadimos un poco de estilo para el formulario */
+        #formulario-busqueda {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+            display: flex;
+            gap: 15px;
+            align-items: flex-end;
+        }
+        #formulario-busqueda div {
+            display: flex;
+            flex-direction: column;
+        }
+        #formulario-busqueda label {
+            font-size: 0.9em;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        #formulario-busqueda input {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        #formulario-busqueda button {
+            padding: 8px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        #tablero {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        #tablero img {
+            width: 100%;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Mi Tablero de Libros</h1>
+    
+    <div id="formulario-busqueda">
+        <div>
+            <label for="input-titulo">Título:</label>
+            <input type="text" id="input-titulo" placeholder="Cien años de soledad...">
+        </div>
+        <div>
+            <label for="input-autor">Autor:</label>
+            <input type="text" id="input-autor" placeholder="García Márquez...">
+        </div>
+        <div>
+            <label for="input-idioma">Idioma (código):</label>
+            <input type="text" id="input-idioma" placeholder="spa, eng, fre...">
+        </div>
+        
+        <button id="btn-agregar">Agregar Libro</button>
+    </div>
+
+    <div id="tablero">
+        </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
